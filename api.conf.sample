@@ -1,0 +1,6 @@
+#!/bin/bash
+# Coro.net API Credentials
+# Check README
+
+CLSECRET=""
+CLID=""

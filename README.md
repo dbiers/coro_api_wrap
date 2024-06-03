@@ -7,11 +7,27 @@ Just some hooking against Coro.net API
 * [KnowledgeBase for API Authentication](https://developers.coro.net/developer-portal/authentication/)
 * [Control Panel: Manage API Keys](https://secure.coro.net/portal/settings/connectors/api-keys)
 
+# Initial Setup
+
+1. Rename `api.conf.sample` to `api.conf`
+2. Fill in variables for Client ID and Client Secret
+3. Generate new token (good for ~24 hours)
+4. Start hitting API endpoints
+
+## Generate new Token Config
+
+```
+$ ./corohook.sh -T
+2024-06-03 13:08:44 [INFO]  Generating/updating new token
+2024-06-03 13:08:44 [INFO]  Using configuration (/path/to/git/coro_api_hooking/api.conf)
+2024-06-03 13:08:44 [INFO]  Got new token, generated new config @ /path/to/git/coro_api_hooking/api_token.conf
+```
+
 # Usage
 
 ## Help Usage
 
-```
+```sh
     ./corohook.sh -W <WORKSPACE_ID> -A <TARGET> [-E <ENDPOINT>][-T][-h][-d][-c <CONFIG>][-t <TOKENCONF>]
 
     -h     Print this help/usage
@@ -26,20 +42,11 @@ Just some hooking against Coro.net API
 
 ```
 
-### Generate new Token Config
-
-```
-$ ./corohook.sh -T
-2024-06-03 13:08:44 [INFO]  Generating/updating new token
-2024-06-03 13:08:44 [INFO]  Using configuration (/path/to/git/coro_api_hooking/api.conf)
-2024-06-03 13:08:44 [INFO]  Got new token, generated new config @ /path/to/git/coro_api_hooking/api_token.conf
-```
-
 ### Example
 
 Example getting devices listing and printing to console:
 
-```
+```sh
 $ ./corohook.sh -W exampleWS_92NB_b -A "v1/devices"
 2024-06-03 13:05:52 [INFO]  Using Workspace ID exampleWS_92NB_b
 2024-06-03 13:05:52 [INFO]  Using configuration (/path/to/coro_api_hooking/api.conf)
