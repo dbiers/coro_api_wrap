@@ -12,7 +12,10 @@ Just some hooking against Coro.net API
 1. Rename `api.conf.sample` to `api.conf`
 2. Fill in variables for Client ID and Client Secret
 3. Generate new token (good for ~24 hours)
-4. Start hitting API endpoints
+4. Get a workspace ID for the target workspace
+   * NOTE: Currently, there is no API function for listing workspaces
+   * Get workspace IDs from Hovering over your profile and going to "My Workspaces"
+5. Start hitting API endpoints
 
 ## Generate new Token Config
 

@@ -16,14 +16,19 @@ func_usage() {
 
     ./${MY_BASE} -W <WORKSPACE_ID> -A <TARGET> [-E <ENDPOINT>][-T][-h][-d][-c <CONFIG>][-t <TOKENCONF>]
 
-    -h     Print this help/usage
+    Required Arguments:
+
+    -A     REQUIRED: API Action (eg. "v1/workspaces")
+    -W     REQUIRED: Workspace ID
+
+    Optional Arguments:
+
+    -h     Print this help/usage info
     -d     Enable Debug (set -x)
     -c     Use a specific configuration file
     -t     Use a specific token configuration file
     -E     Target endpoint (default: https://api.secure.coro.net)
-    -A     REQUIRED: API Action (eg. "v1/workspaces)
     -T     Re/generate the token configuration file
-    -W     REQUIRED: Workspace ID
     -O     Send JSON Output to File
 
     References:
